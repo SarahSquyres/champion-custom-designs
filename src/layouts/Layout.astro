@@ -1,5 +1,7 @@
 ---
-import Navbar from "../components/Navbar.astro"
+import Navbar from "../components/Navbar.astro";
+import Carousel from "../components/Carousel.astro";
+
 
 interface Props {
 	title: string;
@@ -21,11 +23,15 @@ const { title, description = "Default description of Champion Custom Designs web
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:image" content={image}/>
 		<title>{title}</title>
+
 	</head>
 	<!-- Insert individual things i need from each page-->
 	<body class="min-h-screen">
 		<Navbar />
+		<Carousel />
 		<slot />
+		
+		
 	</body>
 </html>
 

@@ -1,0 +1,58 @@
+---
+// Component Imports
+import championImg from '../assets/champion-image.jpg'
+import championImg2 from '../assets/champion-image2.jpg'
+import championImg3 from '../assets/champion-image3.jpg'
+
+import { Image } from 'astro:assets';
+
+---
+<div class="carousel w-full">
+    <div id="item1" class="carousel-item relative w-full animate-infinite-scroll">
+      <Image src={championImg} alt="contemporary house" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        
+      </div>
+    </div> 
+    <div id="item2" class="carousel-item relative w-full animate-infinite-scroll">
+        <Image src={championImg2} alt="contemporary house" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        
+      </div>
+    </div> 
+    <div id="item3" class="carousel-item relative w-full animate-infinite-scroll">
+        <Image src={championImg3} alt="contemporary house" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        
+      </div>
+    </div> 
+    <div id="item4" class="carousel-item relative w-full animate-infinite-scroll">
+      <Image src={championImg} alt="contemporary house" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        
+      </div>
+    </div> 
+  </div>
+  <div class="flex justify-center w-full py-2 gap-2">
+    <a href="#item1" class="btn btn-xs" onclick="scrollToItem('#item1')"></a> 
+    <a href="#item2" class="btn btn-xs" onclick="scrollToItem('#item2')"></a> 
+    <a href="#item3" class="btn btn-xs" onclick="scrollToItem('#item3')"></a> 
+    <a href="#item4" class="btn btn-xs" onclick="scrollToItem('#item4')"></a>
+  </div>
+
+  <script>
+    function scrollToItem(itemId) {
+      // Get the target item element
+      const item = document.getElementById(itemId);
+    
+      // Calculate scroll position considering animation offset
+      // Adjust the offset based on your animation settings (currently -300%)
+      const scrollPosition = item.offsetLeft - item.offsetWidth * 3;
+    
+      // Smoothly scroll to the position
+      document.querySelector('.carousel').scrollBy({
+        left: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
+    </script>
