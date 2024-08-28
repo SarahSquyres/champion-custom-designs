@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start":"cd server && node app.js"
+    "start":"cd src && node app.jsx"
   },
   "dependencies": {
     "react": "^18.3.1",
