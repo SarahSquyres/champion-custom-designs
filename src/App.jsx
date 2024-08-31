@@ -1,17 +1,24 @@
 import React from 'react';
-import NavBar from '../src/components/NavBar';
-import Slideshow from '../src/components/Slideshow';
-import Footer from './components/Footer';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+import Layout from './Layout';
 
 function App () {
   
   return(
-    <>
-    <NavBar />
-    <Slideshow />
-    <Footer />
-    </>
-
+    <Router>
+      <Routes>
+        <Route element={<Layout/>}>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Contact" element={<Contact/>}/>
+          <Route path="/Projects" element={<Projects/>}/>
+        </Route>
+      </Routes>
+    </Router>
   );
+
 }
+
 export default App;
