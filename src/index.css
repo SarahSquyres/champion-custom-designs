@@ -68,12 +68,12 @@ header .nav-btn {
     justify-content: center;
     gap: 1.5rem;
     background-color: var(--mainColor);
-    transition: 1s;
+    transition: 2s;
+    z-index: 50;
   }
 
   header .responsive_nav {
     transform: translateY(100vh);
-    z-index: 50;
   }
 
   nav .nav-close-btn {
@@ -89,7 +89,6 @@ main {
 
 .slide-container {
   text-align: center;
-  background-color: var(--mainColor);
 }
 
 img {
