@@ -28,13 +28,13 @@ header {
   font-size: 1.2rem;
 }
 
-nav a{
+nav a {
   margin: 0 2rem;
   color: var(--textColor);
   text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
   color: var(--secondaryColor);
 }
 
@@ -51,41 +51,42 @@ header .nav-btn {
 }
 
 @media only screen and (max-width: 1024px) {
-    header .nav-btn {
-      visibility: visible;
-      opacity:1;
-    }
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
 
-    header nav{
-      position: fixed;
-      top: -100vh;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      background-color: var(--mainColor);
-      transition: 1s;
-    }
+  header nav {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--mainColor);
+    transition: 1s;
+  }
 
-    header .responsive_nav{
-      transform: translateY(100vh);
-      z-index: 50;
-    }
+  header .responsive_nav {
+    transform: translateY(100vh);
+    z-index: 50;
+  }
 
-    nav .nav-close-btn {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-    }
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
 }
 
 main {
   background-color: var(--mainColor);
 }
+
 .slide-container {
   text-align: center;
   background-color: var(--mainColor);
@@ -94,6 +95,7 @@ main {
 img {
   width: 100%;
 }
+
 .react-slideshow-container .default-nav {
   background: rgba(243, 241, 241, 0);
 }
@@ -124,30 +126,28 @@ footer {
   padding-right: 1rem;
 }
 
-@media screen and (max-width: 600px) { /* Adjust breakpoint as needed */
-  .services-container{
-    
-
+@media screen and (max-width: 600px) {
+  .services-container {
     padding-bottom: 1rem;
     font-size: smaller;
     text-align: left;
   }
 
   .contactInfo-container {
-    font-size:smaller;
+    font-size: smaller;
     text-align: left;
     margin-bottom: 3rem;
-
   }
 }
-@media screen and (max-width: 569px) {
-.services-container {
-  border-right: none;
-  border-bottom: 2px solid;
-  border-color: var(--mainColorDark);
+
+@media screen and (max-width: 586px) {
+  .services-container {
+    border-right: none;
+    border-bottom: 2px solid;
+    border-color: var(--mainColorDark);
+  }
 }
-  
-}
+
 @media screen and (max-width: 400px) {
   .contactInfo-container {
     font-size: x-small;

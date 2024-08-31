@@ -14,9 +14,9 @@ export default function NavBar() {
       <header>
         <h3>Champion Custom Designs</h3>
         <nav ref={navRef}>
-          <Link to="/">Home</Link>
-          <Link to="/Contact">Contact</Link>
-          <Link to="/Projects">Projects</Link>
+          <Link to="/" onClick={showNavbar}>Home</Link>
+          <Link to="/Contact" onClick={showNavbar}>Contact</Link>
+          <Link to="/Projects" onClick={showNavbar}>Projects</Link>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>
