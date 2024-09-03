@@ -10,6 +10,13 @@
   font-style: normal;
 }
 
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mainColor);
+}
+
 :root {
   --mainColor: rgb(10, 10, 10);
   --mainColorDark: rgb(63, 61, 61);
@@ -19,13 +26,18 @@
 
 header {
   display: flex;
+  position:sticky;
+  top: 0;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 5rem;
   padding: 0 2rem;
   background-color: var(--mainColor);
   color: var(--textColor);
   font-size: 1.2rem;
+  z-index: 20;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 nav a {
@@ -83,12 +95,9 @@ header .nav-btn {
   }
 }
 
-main {
-  background-color: var(--mainColor);
-}
-
 .slide-container {
   text-align: center;
+  background-color: var(--mainColor);
 }
 
 img {
@@ -100,11 +109,16 @@ img {
 }
 
 footer {
-  height: 50rem;
-  padding: 0 2rem;
+  margin-top: auto;
+  width: 100%;
+  height: 10rem;
+  padding: 2rem 2rem;
   background-color: var(--mainColor);
-  color: var(--textColor);
-  font-size: 1.2rem;
+  color: var(--mainColorDark);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-container {
@@ -115,6 +129,7 @@ footer {
   margin-left: 5rem;
   margin-right: 5rem;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .services-container {
@@ -123,6 +138,18 @@ footer {
   border-right: 2px solid;
   border-color: var(--mainColorDark);
   padding-right: 1rem;
+}
+
+.phone-number {
+  color: inherit;
+  text-decoration: none;
+  font-size: large;
+}
+
+.email {
+  color: inherit;
+  text-decoration: none;
+  font-size: medium;
 }
 
 @media screen and (max-width: 600px) {
